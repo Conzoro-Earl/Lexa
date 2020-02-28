@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
     try {
     const redeemcode = args.join("")
     if (redeemcode === "free10k") {
-        if (y.includes(message.author.id)) return message.channel.send("You have already redeemed this code, follow orcinus on twitter for more codes: \nhttps://twitter.com/OrcinusBot")
+        if (y.includes(message.author.id)) return message.channel.send("You have already redeemed this code, follow lexabot on twitter for more codes: \nhttps://twitter.com/OrcinusBot")
         y += `${message.author.id}, `;
         console.log(y)
         sql.get(`SELECT * FROM profiles WHERE guildId ="${message.guild.id}" AND userId ="${message.author.id}"`).then(row => {
